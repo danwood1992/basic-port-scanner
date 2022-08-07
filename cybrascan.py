@@ -1,9 +1,12 @@
 #!/usr/bin/python3
 
 import nmap
+import pyfiglet
+
+banner = pyfiglet.figlet_format("cybrascan", justify ='centre', font='cybermedium')
 
 scanner = nmap.PortScanner()
-
+print(banner)
 print("Welcome, this is a simple nmap automation tool")
 print("<----------------------------------------------------->")
 
