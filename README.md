@@ -12,4 +12,4 @@ $ python setup.py install
 or using Pip
 
 $ pip install python-nmap
-Now you may invoke nmap from pythonI
+Now you may invoke nmap from python
