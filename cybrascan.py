@@ -18,8 +18,7 @@ resp_dict={'1':['-v -sS','tcp'],'2':['-v -sU','udp'],'3':['-v -sS -sV -sC -A -O'
 if resp not in resp_dict.keys():
     print("enter a valid option")
 else:
-    print("nmap version: ", nm.nmap.version())
-    nm.scan(ipv4,"1-1024",resp_dict[resp][0]) #the # are port range to scan, the last part is the scan type
+        nm.scan(ipv4,"1-1024",resp_dict[resp][0]) #the # are port range to scan, the last part is the scan type
     print(nm.scaninfo())
     if nm.scaninfo()=='up':
         print("Scanner Status: ", nm[ipv4].state())
