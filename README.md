@@ -1,6 +1,6 @@
 A python-nmap library scanner
 
-Download latest
+Dependencies 
 *python-nmap-0.4.1.tar.gz - 2015-08-21 md5sum is b466e4b2ef30a0b9c0cb80aac215fb79*
 
 Installing python-nmap
