@@ -1,5 +1,4 @@
 #!/usr/bin/python3
-
 import nmap
 import pyfiglet
 
@@ -10,9 +9,9 @@ print(banner)
 print("Welcome, this is a simple nmap automation tool")
 print("<----------------------------------------------------->")
 
-ip_addr = input("Please enter the IP address you want to scan: ")
-print("The IP you entered is: ", ip_addr)
-type(ip_addr)
+ipv4_address = input("Please enter the IP address you want to scan: ")
+print("The IP you entered is: ", ipv4_address)
+type(ipv4_address)
 
 resp = input("""\nPlease enter the scan you want to run
                 1)SYN ACK Scan (TCP)
@@ -24,9 +23,9 @@ if resp not in resp_dict.keys():
     print("enter a valid option")
 else:
     print("nmap version: ", scanner.nmap_version())
-    scanner.scan(ip_addr,"1-1024",resp_dict[resp][0]) #the port range to scan, the last part is the scan type
+    scanner.scan(ipv4_address,"1-1024",resp_dict[resp][0]) #the port range to scan, the last part is the scan type
     print(scanner.scaninfo())
     if scanner.scaninfo()=='up':
-        print("Scanner Status: ",scanner[ip_addr].state())
-        print(scanner[ip_addr].all_protocols())
-        print("Open Ports: ",scanner[ip_addr][resp_dict[resp][1]].keys())  #display all open ports
+        print("Scanner Status: ",scanner[ipv4_address].state())
+        print(scanner[ipv4_address].all_protocols())
+        print("Open Ports: ",scanner[ipv4_address][resp_dict[resp][1]].keys())  #display all open ports
