@@ -24,7 +24,7 @@ if resp not in resp_dict.keys():
     print("enter a valid option")
 else:
     print("nmap version: ", scanner.nmap_version())
-    scanner.scan(ip_addr,"1-1024",resp_dict[resp][0]) #the # are port range to scan, the last part is the scan type
+    scanner.scan(ip_addr,"1-1024",resp_dict[resp][0]) #the port range to scan, the last part is the scan type
     print(scanner.scaninfo())
     if scanner.scaninfo()=='up':
         print("Scanner Status: ",scanner[ip_addr].state())
