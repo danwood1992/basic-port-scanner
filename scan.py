@@ -14,8 +14,8 @@ ip_addr = input("Please enter the IP address you want to scan: ")
 print("The IP you entered is: ", ip_addr)
 type(ip_addr)
 
-resp = input("""\nPlease enter the type of scan you want to run
-                1)SYN ACK Scan
+resp = input("""\nPlease enter the scan you want to run
+                1)SYN ACK Scan (TCP)
                 2)UDP Scan
                 3)Comprehensive Scan \n""")
 print("You have selected option: ", resp)
