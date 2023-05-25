@@ -20,12 +20,14 @@ resp = input("""\nPlease enter the scan you want to run
                 
 print("You have selected option: ", resp)
 
-resp_dict={'1':['-v -sS','tcp'],'2':['-v -sU','udp'],'3':['-v -sS -sV -sC -A -O','tcp']}
+resp_dict={
+           '1':['-v -sS','tcp'],
+           '2':['-v -sU','udp'],
+           '3':['-v -sS -sV -sC -A -O','tcp']
+          }
 
 if resp not in resp_dict.keys():
-
-    print("enter a valid option")
-    
+    print("Enter a valid option..")   
 else:
     print("nmap version: ", scanner.nmap_version())
     
